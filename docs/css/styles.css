@@ -1,0 +1,292 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: rgb(9,76,114);
+}
+
+#chart {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+#stonk {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: #C6FFDD;
+  position: absolute;
+  left: 2%;
+  top: 2%;
+}
+
+path {
+  fill: url(#testgrad);
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-item {
+  color: white;
+  text-align: left;
+  padding: 1em;
+}
+
+a {
+  color: #67809f;
+}
+
+g {
+  z-index: 1;
+  opacity: 1;
+}
+
+.area {
+  
+}
+
+.pattern {
+  overflow: hidden;
+}
+
+.grass {
+  background: #466e61;
+  height: 10%;
+  width: 100%;
+  bottom: 1%;
+  position: absolute;  
+}
+
+.water {
+  background: rgb(9,76,114);
+  height: 1%;
+  width: 100%;
+  bottom: 0;
+  position: absolute;    
+}
+
+.hill1 {
+  background: #466e61;
+  width: 9%;
+  height: 14.5%;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 7%;
+}
+
+.hill2 {
+  background: #466e61;
+  width: 7%;
+  height: 13%;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 14%;
+}
+
+.hill3 {
+  background: #466e61;
+  width: 15%;
+  height: 15%;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+}
+
+.hill4 {
+  background: #466e61;
+  width: 8%;
+  height: 14.5%;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 65%;
+}
+
+
+.tree1 {
+  height: 30px;
+  width: 25px;
+  background-color: #6a976c;
+  border-radius: 100%;
+  bottom: 5%;
+  left: 25%;
+  position: absolute;
+}
+
+.trunk {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 4px 35px 4px;
+  border-color: transparent transparent #374544;
+  position: relative;  
+  margin-top: 15px;
+  margin-left: 8px;  
+}
+
+.tree2 {
+  height: 30px;
+  width: 25px;
+  background-color: #6a976c;
+  border-radius: 100%;
+  bottom: 6%;
+  left: 55%;
+  position: absolute;
+}
+
+.tree3 {
+  height: 30px;
+  width: 25px;
+  background-color: #6a976c;
+  border-radius: 100%;
+  bottom: 4%;
+  left: 30%;
+  position: absolute;
+}
+
+
+/* Bird */
+.bird-wrapper {
+  position: absolute;
+  width: 100%;
+  animation: fly 15s infinite linear;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.bird div {
+  position: absolute;
+}
+
+.bird {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  animation: float 0.7s infinite cubic-bezier(0.7, 0.7, 0.1, 0.4);
+}
+
+.bird-body-one,
+.bird-body-two,
+.bird-wing-left,
+.bird-wing-right {
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.bird-body-one {
+  border-width: 15px;
+  border-left-width: 25px;
+  border-top-width: 20px;
+  border-right-width: 60px;
+  border-top-color: #ade6fe;
+  border-radius: 15px;
+}
+
+.bird-body-two {
+  left: 50px;
+  bottom: 0;
+  border-width: 5px;
+  border-left-width: 5px;
+  border-top-width: 2px;
+  border-right-width: 10px;
+  border-bottom-color: #dff4fd;
+  border-radius: 15px;
+}
+
+.bird-wing-left {
+  left: 20px;
+  bottom: -5px;
+  border-width: 10px;
+  border-left-width: 20px;
+  border-bottom-width: 0;
+  border-right-width: 10px;
+  border-bottom-color: #dff4fd;
+  animation: flap-left 0.7s ease-in-out infinite;
+}
+
+.bird-wing-right {
+  left: 22px;
+  top: 4px;
+  border-width: 10px;
+  border-left-width: 20px;
+  border-bottom-width: 0;
+  border-right-width: 10px;
+  border-top-color: #dff4fd;
+  animation: flap-right 0.7s ease-in-out infinite;
+}
+
+@keyframes flap-right {
+  0%,
+  10% {
+    border-top-width: 20px;
+  }
+  40%,
+  60% {
+    border-top-width: 10px;
+  }
+  100% {
+    border-top-width: 40px;
+  }
+}
+
+@keyframes flap-left {
+  0% {
+    border-bottom-width: 0;
+  }
+  40%,
+  60% {
+    border-bottom-width: 40px;
+  }
+  100% {
+    border-bottom-width: 0;
+  }
+}
+
+@keyframes fly {
+  0%,
+  10% {
+    left: -50%;
+    top: 150px;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+  90%,
+  100% {
+    left: 100%;
+    top: 160px;
+    transform: scale3d(0.25, 0.25, 1);
+  }
+}
+
+@keyframes float {
+  0% {
+    top: 25px;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: 25px;
+  }
+}

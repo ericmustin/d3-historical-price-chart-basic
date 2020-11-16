@@ -1,15 +1,36 @@
-<!DOCTYPE html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./styles.css" type="text/css" media="screen" charset="utf-8">
-<script src="https://d3js.org/d3.v5.min.js"></script>
-</head>
-<body>
-  <div class="flex-container">
-    <div class="flex-item">
-      <p>Historical price chart of Vanguard Dividend Appreciation ETF(<a target="_blank" href="https://sg.finance.yahoo.com/quote/VIG/chart?p=VIG">VIG</a>), built with D3.js. Prices are displayed in United States Dollars(USD). Feel free to check out the source code at <a target="_blank" href="https://github.com/wentjun/d3-historical-price-chart-basic">GitHub</a>.</p>
-    </div>
-  </div>
-  <div id="chart"></div>
-  <script src="chart.js"></script>
-</body>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/styles.css" type="text/css" media="screen" charset="utf-8">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
+	</head>
+	<body>
+	  <div id="chart">
+	  	<div id="stonk"></div>
+	  	<div class="grass"></div>
+	  	<div class="hill hill1"></div>
+	  	<div class="hill hill2"></div>
+	  	<div class="hill hill3"></div>
+	  	<div class="hill hill4"></div>
+		<div class="tree tree1">
+		  <div class="trunk"></div>
+		</div>
+		<div class="tree tree2">
+		  <div class="trunk"></div>
+		</div>
+		<div class="tree tree3">
+		  <div class="trunk"></div>
+		</div>
+		<div class="water"></div>
+		<div data-offset="80" class="bird-wrapper  parallax">
+		  <div class="bird">
+		    <div class="bird-body-two"></div>
+		    <div class="bird-body-one"></div>
+		    <div class="bird-wing-left"></div>  
+		    <div class="bird-wing-right"></div>  
+		  </div>
+		</div>
+	  </div>
+	  <script src="js/index.js"></script>
+	</body>
+</html>
